@@ -1,19 +1,4 @@
 
-
-# cleverly_low_key_monkeys = []
-# new_friend = list()
-
-
-
-
-
-
-
-
-
-
-
-
 # try:
 
 new_friends = list()
