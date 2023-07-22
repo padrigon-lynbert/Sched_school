@@ -1,6 +1,20 @@
 import random
+import os
+def cls(): os.system('cls')
 
-while True:
-    r = random.randint(1, 5)
-    n = int(input("Guess: "))
-    if n == r: break
+r = random.randint(1, 5)
+
+def guess_random(r):
+    while True:
+        n = int(input("Guess: "))
+
+        cls()
+
+        if n == r: break
+        else:
+            if n > r:
+                print("Lower")
+            else:
+                print("Higher")
+
+guess_random(r)
