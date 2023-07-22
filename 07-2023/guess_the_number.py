@@ -4,7 +4,7 @@ def cls(): os.system('cls')
 
 r = random.randint(1, 1000)
 
-def guess_random(random_number):
+def guess_random(random_number): 
     while True:
         n = int(input("Guess: "))
 
@@ -20,3 +20,5 @@ def guess_random(random_number):
                 print("Higher")
 
 guess_random(r)
+
+        
