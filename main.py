@@ -1,6 +1,7 @@
 from datetime import datetime
 
 def day_today():
+    global day_number
     day_number = datetime.today().weekday()
     days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
     
@@ -13,17 +14,52 @@ def time_now():
     return print(f"{date}: {day_today()} {time}")
 
 def sched_acads(day):
-    if day == "Monday":
-        print
+    sched = [
+    """
+    Saucelit | 11:30-13:00\n\
+    PE       | 13:00-14:00
+        
+    """, 
+    "No classes today.",
+    """
+    Humcom   | 11:30-13:00
+    Qwimms 	 | 13:30-15:00
+    Web	     | 15:00-16:30
+    """,
+    "No classes today",
+    """
+    iPat     | 06:30-08:00
+    Netw     | 08:30-10:00
+    DSA      | 10:00-11:30
+    """,
+    "No classes today",
+    "No classes today"]
+        
+    return print(sched[day_number])
 
-
-time_now()
-# day_today()
-
-# tdelta = datetime.timedelta(days=7)
-# print(date + tdelta)
-
-# bday = datetime.date(2024, 6, 20)
-# til_bday = bday - date
-
-# print(til_bday)
+# run()
+def wala_tite_lang():
+    print("""
+────────────▄▀░░░░░▒▒▒█────
+───────────█░░░░░░▒▒▒█▒█───
+──────────█░░░░░░▒▒▒█▒░█───
+────────▄▀░░░░░░▒▒▒▄▓░░█───
+───────█░░░░░░▒▒▒▒▄▓▒░▒▓───
+──────█▄▀▀▀▄▄▒▒▒▒▓▀▒░░▒▓───
+────▄▀░░░░░░▒▀▄▒▓▀▒░░░▒▓───
+───█░░░░░░░░░▒▒▓▀▒░░░░▒▓───
+───█░░░█░░░░▒▒▓█▒▒░░░▒▒▓───
+────█░░▀█░░▒▒▒█▒█░░░░▒▓▀───
+─────▀▄▄▀▀▀▄▄▀░█░░░░▒▒▓────
+───────────█▒░░█░░░▒▒▓▀────
+────────────█▒░░█▒▒▒▒▓─────
+───LYNBERT──▀▄▄▄▀▄▄▀───────
+        """)
+    
+def run():
+    wala_tite_lang()
+    time_now(); 
+    print("\nSchedules: ")
+    sched_acads(day_today())    
+# sched_acads(day_today())
+run()
