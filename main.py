@@ -1,4 +1,5 @@
 from datetime import datetime
+import os
 
 def day_today():
     global day_number
@@ -23,7 +24,7 @@ def sched_acads(day):
     "No classes today.",
     """
     Humcom   | 11:30-13:00
-    Qwimms 	 | 13:30-15:00
+    Qwimms   | 13:30-15:00
     Web	     | 15:00-16:30
     """,
     "No classes today",
@@ -36,30 +37,12 @@ def sched_acads(day):
     "No classes today"]
         
     return print(sched[day_number])
-
-# run()
-def wala_tite_lang():
-    print("""
-────────────▄▀░░░░░▒▒▒█────
-───────────█░░░░░░▒▒▒█▒█───
-──────────█░░░░░░▒▒▒█▒░█───
-────────▄▀░░░░░░▒▒▒▄▓░░█───
-───────█░░░░░░▒▒▒▒▄▓▒░▒▓───
-──────█▄▀▀▀▄▄▒▒▒▒▓▀▒░░▒▓───
-────▄▀░░░░░░▒▀▄▒▓▀▒░░░▒▓───
-───█░░░░░░░░░▒▒▓▀▒░░░░▒▓───
-───█░░░█░░░░▒▒▓█▒▒░░░▒▒▓───
-────█░░▀█░░▒▒▒█▒█░░░░▒▓▀───
-─────▀▄▄▀▀▀▄▄▀░█░░░░▒▒▓────
-───────────█▒░░█░░░▒▒▓▀────
-────────────█▒░░█▒▒▒▒▓─────
-───LYNBERT──▀▄▄▄▀▄▄▀───────
-        """)
     
 def run():
-    wala_tite_lang()
+    os.system('cls')
     time_now(); 
     print("\nSchedules: ")
-    sched_acads(day_today())    
-# sched_acads(day_today())
+    sched_acads(day_today())
+    input("<enter>\n\n")
+    os.system('cls')
 run()
