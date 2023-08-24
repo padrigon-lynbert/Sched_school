@@ -43,6 +43,6 @@ def run():
     time_now(); 
     print("\nSchedules: ")
     sched_acads(day_today())
-    input("<enter>\n\n")
+    input("\n<enter>\n\n")
     os.system('cls')
 run()
